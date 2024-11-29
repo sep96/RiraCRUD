@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiraCRUD.Api", "src\RiraCRUD.Api\RiraCRUD.Api.csproj", "{928EDCD1-255C-4E28-8101-9B0AF9439289}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{91F990E1-39D3-496A-A78A-56BF7C29AC20}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{4EA2EEB3-A712-4571-9884-598BCF558C74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiraCRUD.Application", "src\RiraCRUD.Application\RiraCRUD.Application.csproj", "{CFBA222F-80CB-4F02-B2D7-B39C0FB9B6F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiraCRUD.Domain", "src\RiraCRUD.Domain\RiraCRUD.Domain.csproj", "{380BBD3F-BB61-45D6-BA51-EACFE4AD0C56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiraCRUD.infrastructure", "src\RiraCRUD.infrastructure\RiraCRUD.infrastructure.csproj", "{936E482A-2556-415F-A7D0-76BB00F1DA36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{928EDCD1-255C-4E28-8101-9B0AF9439289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{928EDCD1-255C-4E28-8101-9B0AF9439289}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{928EDCD1-255C-4E28-8101-9B0AF9439289}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{928EDCD1-255C-4E28-8101-9B0AF9439289}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFBA222F-80CB-4F02-B2D7-B39C0FB9B6F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFBA222F-80CB-4F02-B2D7-B39C0FB9B6F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFBA222F-80CB-4F02-B2D7-B39C0FB9B6F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFBA222F-80CB-4F02-B2D7-B39C0FB9B6F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{380BBD3F-BB61-45D6-BA51-EACFE4AD0C56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{380BBD3F-BB61-45D6-BA51-EACFE4AD0C56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{380BBD3F-BB61-45D6-BA51-EACFE4AD0C56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{380BBD3F-BB61-45D6-BA51-EACFE4AD0C56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{936E482A-2556-415F-A7D0-76BB00F1DA36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{936E482A-2556-415F-A7D0-76BB00F1DA36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{936E482A-2556-415F-A7D0-76BB00F1DA36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{936E482A-2556-415F-A7D0-76BB00F1DA36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{928EDCD1-255C-4E28-8101-9B0AF9439289} = {91F990E1-39D3-496A-A78A-56BF7C29AC20}
+		{CFBA222F-80CB-4F02-B2D7-B39C0FB9B6F9} = {91F990E1-39D3-496A-A78A-56BF7C29AC20}
+		{380BBD3F-BB61-45D6-BA51-EACFE4AD0C56} = {91F990E1-39D3-496A-A78A-56BF7C29AC20}
+		{936E482A-2556-415F-A7D0-76BB00F1DA36} = {91F990E1-39D3-496A-A78A-56BF7C29AC20}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8907F250-7E20-454E-86F3-0CEE8892DA7F}
+	EndGlobalSection
+EndGlobal
