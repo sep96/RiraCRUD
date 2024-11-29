@@ -17,4 +17,13 @@
     <ProjectReference Include="..\RiraCRUD.Domain\RiraCRUD.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Common\DTOs\" />
+    <Folder Include="Common\Interfaces\" />
+    <Folder Include="Common\Exceptions\" />
+    <Folder Include="Common\Services\" />
+    <Folder Include="Person\Commands\" />
+    <Folder Include="Person\Queries\" />
+  </ItemGroup>
+
 </Project>
