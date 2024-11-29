@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Carter" Version="8.1.0" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.67.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.11">
       <PrivateAssets>all</PrivateAssets>
@@ -18,6 +19,10 @@
   <ItemGroup>
     <ProjectReference Include="..\RiraCRUD.Application\RiraCRUD.Application.csproj" />
     <ProjectReference Include="..\RiraCRUD.Infrastructure\RiraCRUD.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Persons\GetPerson\" />
   </ItemGroup>
 
 </Project>

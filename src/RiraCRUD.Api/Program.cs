@@ -1,4 +1,4 @@
-using RiraCRUD.Infrastructure.Persistence;
+using RiraCRUD.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 

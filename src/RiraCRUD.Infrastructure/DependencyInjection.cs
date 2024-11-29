@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RiraCRUD.Infrastructure.Persistence
+namespace RiraCRUD.Infrastructure
 {
     public static class DependencyInjection
     {
