@@ -18,10 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Common\Interfaces\" />
     <Folder Include="Common\Exceptions\" />
-    <Folder Include="Common\Services\" />
-    <Folder Include="Person\Commands\" />
     <Folder Include="Person\Queries\" />
   </ItemGroup>
 

@@ -21,8 +21,4 @@
     <ProjectReference Include="..\RiraCRUD.Infrastructure\RiraCRUD.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Persons\GetPerson\" />
-  </ItemGroup>
-
 </Project>
