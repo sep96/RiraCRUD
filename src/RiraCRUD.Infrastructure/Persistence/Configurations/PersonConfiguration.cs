@@ -1,16 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace RiraCRUD.Infrastructure.Persistence.Configurations
 {
     public class PersonConfiguration : IEntityTypeConfiguration<Person>
     {
         public void Configure(EntityTypeBuilder<Person> builder)
-        {
+        {   
             // Define table name
             builder.ToTable("Persons");
 
@@ -37,10 +31,7 @@ namespace RiraCRUD.Infrastructure.Persistence.Configurations
             // Unique constraint on NationalId
             builder.HasIndex(p => p.NationalId)
                 .IsUnique();
-
-            // Concurrency token
-            builder.Property(p => p.RowVersion)
-                .IsRowVersion();
+             
         }
     }
 }
