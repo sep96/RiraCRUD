@@ -5,12 +5,12 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RiraCRUD.Domain.Base;
 
 namespace RiraCRUD.Domain.Entities
 {
-    public class Person
+    public class Person : BaseEntity
     {
-        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string NationalId { get; set; } 
