@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RiraCRUD.Domain.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,6 @@ namespace RiraCRUD.Application.Common.DTOs.Base
         public string SortDirection { get; set; }
         public string PageIndex { get; set; }
         public string PageSize { get; set; }
-
+        public Dictionary<string, (FilterOperator Operator, object Value)> Filters { get; set; }
     }
 }

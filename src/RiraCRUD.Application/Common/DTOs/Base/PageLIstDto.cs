@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RiraCRUD.Application.Common.DTOs.Base
 {
-    public class PageLIstDto<T>
+    public class PageListDto<T>
     {
         public int DataCount { get; set; } = 0;
         public List<T> Data { get; set; } = new List<T>();

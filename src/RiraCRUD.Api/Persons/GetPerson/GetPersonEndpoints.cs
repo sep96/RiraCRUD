@@ -2,10 +2,11 @@
 using MediatR;
 using RiraCRUD.Application.Common.DTOs.Base;
 using RiraCRUD.Application.Common.DTOs.Persons;
+using RiraCRUD.Application.Person.Queries;
 
 namespace RiraCRUD.Api.Persons.GetPerson
 {
-    public record GetPeronsRequest(GridFilterDto GridFilterDto);
+    public record GetPeronsRequest(GetPersonQuery GridFilterDto);
     public record GetPeronsResponse(PersonDto IsSuccess);
 
     public class GetPersonEndpoints : ICarterModule
