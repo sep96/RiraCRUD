@@ -1,0 +1,86 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "RiraCRUD.Api.Protos.PerosnsEndpoint";
+
+import "google/protobuf/timestamp.proto";
+ 
+message AddPersonDto {
+    string first_name = 1;
+    string last_name = 2;
+    string national_id = 3;
+    google.protobuf.Timestamp date_of_birth = 4;
+}
+ 
+message PersonDto {
+    int64 id = 1;
+    string first_name = 2;
+    string last_name = 3;
+    string national_id = 4;
+    google.protobuf.Timestamp date_of_birth = 5;
+}
+ 
+message GridFilterDto {
+    string sort_by = 1;
+    string sort_direction = 2;
+    string page_index = 3;
+    string page_size = 4;
+    map<string, Filter> filters = 5;
+}
+ 
+message Filter {
+    string operator = 1;  
+    string value = 2;
+}
+ 
+message PageListDto {
+    int32 data_count = 1;
+    repeated PersonDto data = 2;
+}
+ 
+message AddPersonRequest {
+    AddPersonDto add_person_dto = 1;
+}
+ 
+message AddPersonResponse {
+    bool is_success = 1;
+}
+ 
+message DeletePersonRequest {
+    int32 id = 1;
+}
+ 
+message DeletePersonResponse {
+    bool is_success = 1;
+}
+ 
+message UpdatePersonRequest {
+    PersonDto person_dto = 1;
+}
+ 
+message UpdatePersonResponse {
+    bool is_success = 1;
+}
+ 
+message GetPersonsRequest {
+    GridFilterDto grid_filter = 1;
+}
+ 
+message GetPersonsResponse {
+    PageListDto persons = 1;
+}
+ 
+message GetPersonRequest {
+    int32 id = 1;
+}
+ 
+message GetPersonResponse {
+    PersonDto person = 1;
+}
+ 
+service PersonService {
+    rpc AddPerson (AddPersonRequest) returns (AddPersonResponse);
+    rpc DeletePerson (DeletePersonRequest) returns (DeletePersonResponse);
+    rpc UpdatePerson (UpdatePersonRequest) returns (UpdatePersonResponse);
+    rpc GetPersons (GetPersonsRequest) returns (GetPersonsResponse);
+    rpc GetPerson (GetPersonRequest) returns (GetPersonResponse);
+}

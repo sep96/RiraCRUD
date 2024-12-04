@@ -18,7 +18,7 @@ namespace RiraCRUD.Application.Common.DTOs.Persons
         {
             public Mapping()
             {
-                CreateMap<AddPersonDto, Person>();
+                CreateMap<AddPersonDto, RiraCRUD.Domain.Entities.Person>();
             }
         }
     }

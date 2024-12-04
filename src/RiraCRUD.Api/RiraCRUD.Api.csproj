@@ -18,7 +18,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RiraCRUD.Application\RiraCRUD.Application.csproj" />
-    <ProjectReference Include="..\RiraCRUD.Infrastructure\RiraCRUD.Infrastructure.csproj" />
+    <ProjectReference Include="..\RiraCRUD.Infrastructure\RiraCRUD.Infrastructure.csproj" /> 
+   <Protobuf Include="Protos/PerosnsEndpoint/Persons.proto" GrpcServices="Server" />
   </ItemGroup>
 
 </Project>
