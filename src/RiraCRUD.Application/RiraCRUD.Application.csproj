@@ -18,8 +18,4 @@
     <ProjectReference Include="..\RiraCRUD.Domain\RiraCRUD.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Common\Exceptions\" />
-  </ItemGroup>
-
 </Project>

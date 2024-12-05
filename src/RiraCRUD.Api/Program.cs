@@ -9,6 +9,7 @@ builder.Services.AddCoreInfrastructure(builder.Configuration);
 builder.Services.AddGrpc(options =>
 {
     options.EnableDetailedErrors = builder.Environment.IsDevelopment();
+    options.Interceptors.Add<GlobalExceptionInterceptor>();
 });
 
 builder.Services.AddSingleton<GlobalExceptionInterceptor>();
@@ -19,8 +20,7 @@ app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
 
 app.UseHttpsRedirection();
 
-app.MapGrpcService<PersonService>()
-   .AddGrpcInterceptor<GlobalExceptionInterceptor>();
+app.MapGrpcService<PersonService>();
 
 app.MapGet("/", () => "Use a gRPC client to communicate with this server.");
 
