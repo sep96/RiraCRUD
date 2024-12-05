@@ -1,22 +1,17 @@
+using RiraCRUD.Api.Services;
 using RiraCRUD.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
 builder.Services.AddCoreInfrastructure(builder.Configuration);
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-
+builder.Services.AddGrpc(); 
 
 var app = builder.Build();
 
  
 app.UseHttpsRedirection();
+ 
 
-app.UseAuthorization();
-
-app.MapControllers();
+app.MapGrpcService<PersonService>();
+app.MapGet("/", () => "Use a gRPC client to communicate with this server.");
 
 app.Run();

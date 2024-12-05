@@ -35,26 +35,19 @@ namespace RiraCRUD.Api.Services
         public override async Task<GetPersonsResponse> GetPersons(GetPersonsRequest request, ServerCallContext context)
         {
             var result = await _mediator.Send(_mapper.Map<GetPeronsQuery>(request));
-            return new GetPersonsResponse
-            {
-               Persons = new PageListDto
-               {
-                   Data = result.Data ,
-                   DataCount = result.DataCount ,
-               }
-            };
+            return _mapper.Map<GetPersonsResponse>(result);
         }
 
         public override async Task<GetPersonResponse> GetPerson(GetPersonRequest request, ServerCallContext context)
         {
-            var result = await _mediator.Send(new GetPersonQuery(request.PersonId));
-            return result == null ? null : new GetPersonResponse { Person = new PersonDto { Id = result.Id, Name = result.Name, Family = result.Family } };
+            var result = await _mediator.Send(_mapper.Map<GetPersonQuery>(request));
+            return _mapper.Map<GetPersonResponse>(result);
         }
 
         public override async Task<UpdatePersonResponse> UpdatePerson(UpdatePersonRequest request, ServerCallContext context)
         {
-            var result = await _mediator.Send(new UpdatePersonCommand(request.Id, request.Name, request.Family));
-            return new UpdatePersonResponse { IsSuccess = result };
+            var result = await _mediator.Send(_mapper.Map<UpdatePersonCommand>(request));
+            return _mapper.Map<UpdatePersonResponse>(result);
         }
     }
 }
